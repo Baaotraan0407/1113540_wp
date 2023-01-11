@@ -1,0 +1,107 @@
+
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+* 
+{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+.button
+{
+	visibility: hidden;
+	z-index:-100; 
+}
+.box-menu{
+	position: absolute;
+	left: 80px;
+	top: 100px;
+	cursor: pointer;
+	background: #302e2c;
+	width: 60px;
+	height: 60px;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, .3);
+	border-radius: 60px;
+	transition:height .4s;
+}
+.full-menu{height: 400px;}
+.wrapper{
+	position: relative;
+	width: 60px;
+	height: 60px;
+}
+.hamburger{
+	position: absolute;
+	left: 22px;
+	top: 22px;
+	width: 16px;
+	height: 16px;
+}
+.hamburger span{
+	position: absolute;
+	display: inline-block;
+	height: 2px;
+	width: 100%;
+	background: #eeeef1;
+	border-radius: 10px;
+	transition: all .3s;
+}
+.hamburger span:nth-child(1){top: 3px;}
+.hamburger span:nth-child(2){top: 8px;}
+.hamburger span:nth-child(3){top: 8px;}
+.hamburger span:nth-child(4){top: 13px;}
+
+.hamburger.active span:nth-child(1){width: 0; margin-left: 8px;}
+.hamburger.active span:nth-child(2){transform: rotate(45deg);}
+.hamburger.active span:nth-child(3){transform: rotate(-45deg);}
+.hamburger.active span:nth-child(4){width: 0; margin-left: 8px;}
+.menu{position: relative; left: -9999px;}
+.menu a
+{
+	white-space: nowrap;
+	position: relative;
+	display: inline-block;
+	color: rgb(248, 246, 246);
+	text-decoration: none;
+	width: 150px;
+	height: 58px;
+	line-height: 58px;
+	font-family: Ubuntu;
+}
+.menu a::after{
+	content: '';
+	position: absolute;
+	left: 50px;
+	width: 15px;
+	background: #302e2c;
+	transition: height .3s, top .3s;
+	transform: rotateZ(43deg);
+}
+.menu a.active::after{top: 19px; height: 20px;}
+.menu a span{opacity: 0; display: inline-block; font-size: 14px;}
+.menu a span.icon{
+	transform: scale(.5);
+	color: #f5f5f8;
+	font-size: 18px;
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	transition: transform .3s;
+}
+.menu a span.text{
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	margin-left: 40px;
+	color: #302e2c;
+	transition: margin .3s, opacity .3s, transform .3s;
+}
+.full-menu .menu{left: 0;}
+.full-menu .menu a:hover span{opacity: 1;}
+.full-menu .menu a span {opacity: 0.8;}
+.full-menu .menu a span.icon{transform: scale(1.1);}
+.full-menu .menu a span.text{margin-left: 25px;}
+.full-menu .menu a:hover span.text {transform: translateX(5px); transition-delay: 0s;}
+
+.menu a:nth-child(1) span{transition: all 0.5s 0.1s, opacity 0.5s 0s, transform 0.5s 0s;}
+.menu a:nth-child(2) span{transition: all 0.5s 0.15s, opacity 0.5s 0s, transform 0.5s 0s;}
+.menu a:nth-child(3) span{transition: all 0.5s .2s, opacity 0.5s 0s, transform 0.5s 0s;}
+.menu a:nth-child(4) span{transition: all 0.5s .25s, opacity 0.5s 0s, transform 0.5s 0s;}

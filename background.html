@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset ="utf-8">
+        <meta name = "viewport" content="width= device-width, initial-scale=1.0">
+        <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" 
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="background.css" />
+        <title>
+            Home Page
+        </title>
+    </head>
+
+<body style ="color: rgba(255, 235, 205, 0);">
+    
+   
+    <section>
+        <video id ="slider1" muted loop autoplay>
+            <source src="Spirited Away - An AMV Tribute (online-video-cutter.com).mp4" type ="video0/mp4">
+            <source src="video1.mp4" type="video1/mp4">
+            <source src="video2.mp4" type="video2/mp4">
+            <source src="video3.mp4" type="video3/mp4">
+            
+        </video> 
+         
+        
+        <ul class ="navigation1">
+            <li onclick="videoUrl('Spirited Away - An AMV Tribute (online-video-cutter.com).mp4')"> <img src="chihiro042.jpg"></li>
+            <li onclick="videoUrl('video1.mp4')"> <img src="18.png"></li>
+            <li onclick="videoUrl('video2.mp4')"> <img src="44.png"></li>
+            <li onclick="videoUrl('video3.mp4')"> <img src="howl016.jpg"></li>
+            
+        </ul>
+        
+           
+    </section>
+    <script>
+        function videoUrl (hmmmmmm){
+            document.getElementById ("slider1").src = hmmmmmm; 
+        }
+    </script> 
+</body>
+</html>
